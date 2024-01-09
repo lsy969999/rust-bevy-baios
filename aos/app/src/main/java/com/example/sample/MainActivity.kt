@@ -15,6 +15,10 @@ import com.example.sample.ui.theme.SampleTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val rg = RustGreetings();
+        val str = rg.sayHello("world");
+        println("sayHello:: ${str}");
         setContent {
             SampleTheme {
                 // A surface container using the 'background' color from the theme

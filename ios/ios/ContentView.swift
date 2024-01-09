@@ -16,6 +16,17 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear{
+            tt();
+        }
+    }
+    
+    
+    func tt(){
+        test_print();
+        let result  = rust_greeting("hifff");
+        let swift_result = String(cString: result!);
+        print("swift_result: \(swift_result)");
     }
 }
 
